@@ -1,0 +1,578 @@
+/* Font */
+
+@font-face {
+  font-family: "josefin_sanslight";
+  src: url("/assets/font/josefinsans-light-webfont.woff2") format("woff2"), url("/assets/font/josefinsans-light-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "JosefinSansBold";
+  src: url("/assets/font/JosefinSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RubikBold";
+  src: url("/assets/font/Rubik-SemiBold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  font-family: "josefin_sanslight", sans-serif;
+  color: #fff;
+}
+
+/* Header dan Navigasi */
+
+/* nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #222;
+}
+.logo {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+}
+
+.logo a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Silkscreen", cursive;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex: 2;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-family: "RubikBold", sans-serif;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: rgb(196, 155, 102);
+} */
+
+/* mencoba */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s ease-in;
+  padding: 40px 100px;
+}
+
+nav.sticky {
+  padding: 10px 100px;
+  background-color: #222;
+}
+
+nav .logo a {
+  position: relative;
+  font-size: 2rem;
+  font-family: "Silkscreen", cursive;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+.nav-item a:hover {
+  color: rgb(196, 155, 102);
+  transition: 0.5s ease-in-out;
+}
+
+.nav-link {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: "RubikBold", sans-serif;
+}
+
+/* batas coba */
+
+/* Menu hamburger */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header Bground */
+
+.bground {
+  background: url(../img/bg1.png);
+  min-height: 110vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.text-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-caption h2 {
+  font-family: "josefin_sanslight", sans-serif;
+  font-size: 70px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.text-caption span {
+  font-family: "JosefinSansBold", sans-serif;
+  font-size: 70px;
+}
+
+.text-caption b {
+  color: rgb(196, 155, 102);
+}
+
+/* About Me */
+
+.about {
+  background-color: #0a0a0c;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.left-content h4 {
+  font-size: 60px;
+  font-family: "JosefinSansBold", sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.4s ease-in-out;
+}
+
+.left-content h4:hover {
+  color: #c49b66;
+}
+
+.left-content {
+  width: 350px;
+}
+
+.foto {
+  width: 380px;
+  text-align: right;
+}
+
+.foto img {
+  max-width: 380px;
+}
+
+.right-content {
+  width: 350px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.right-content h6 {
+  font-family: "josefin_sanslight", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
+
+.right-content h4 {
+  font-family: "JosefinSansBold", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: #c49b66;
+  /* padding: 0 10px; */
+  letter-spacing: 2px;
+  padding: 0 12px;
+}
+
+/* Card Skill */
+.skills {
+  background-color: #0f0f0ffb;
+  padding: 120px 0;
+}
+
+.head h4 {
+  font-size: 60px;
+  font-family: "JosefinSansBold", sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.4s ease-in-out;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.head h4:hover {
+  color: #c49b66;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: #0a0a0c;
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+  height: 300px;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 2px 7px #c49b66;
+}
+
+.content h6 {
+  font-family: "JosefinSansBold", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #8f8f8f;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.icon {
+  margin-bottom: 15px;
+}
+
+/* Contact */
+
+.container-msg {
+  display: flex;
+  justify-content: end;
+}
+
+.contact {
+  background-color: #0a0a0c;
+  padding: 120px 0;
+}
+
+.item-info {
+  margin-bottom: 30px;
+  width: 400px;
+}
+
+.item-info h6 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #c49b66;
+  margin-bottom: 10px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: "JosefinSansBold", sans-serif;
+}
+
+.item-info p {
+  color: #8f8f8f;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+}
+
+.message .name {
+  flex-basis: 290px;
+  font-size: 14px;
+  padding: 15px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.message .subject,
+.msg {
+  flex-basis: 670px;
+  font-size: 14px;
+  padding: 15px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+  flex-basis: 670px;
+}
+
+.btn-submit {
+  width: 150px;
+  padding: 13px;
+  border-radius: 20px;
+  background-color: #c49b66;
+  border: 0;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.btn-submit:hover {
+  background-color: #eee;
+  color: #c49b66;
+}
+
+.sosmed {
+  background-color: #0f0f0ffb;
+  height: 327px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.contain-footer {
+  width: 1140px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contain-footer p {
+  color: #999;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-family: "Silkscreen", cursive;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.icon-sm {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin: 30px 10px;
+}
+
+.icon-sm:hover {
+  background-color: #eee;
+}
+
+/* Responsive */
+
+/* tablet */
+@media screen and (max-width: 768px) and (min-width: 350px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav {
+    padding: 20px 40px;
+  }
+
+  .logo {
+    justify-content: start;
+  }
+
+  .logo h2 a {
+    color: #fff;
+  }
+
+  .menu-toggle .bar {
+    background-color: #fff;
+  }
+
+  nav.sticky {
+    padding: 10px 40px;
+    background-color: rgb(34, 34, 34);
+    padding-bottom: 20px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    opacity: 01;
+  }
+
+  .text-caption span,
+  b {
+    text-align: center;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .about .left-content {
+    width: 300px;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about .foto {
+    margin: 0 auto 40px;
+  }
+
+  .about .right-content {
+    max-width: 350px;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .container-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 400px;
+  }
+
+  .item-info {
+    padding-left: 10px;
+  }
+
+  .message .name {
+    min-width: 400px;
+  }
+  .contain-footer {
+    min-width: 400px;
+  }
+
+  .contain-footer p {
+    line-height: 25px;
+  }
+}
+
+/* @media screen and (min-width: 480px) {
+} */
